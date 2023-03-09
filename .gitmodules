@@ -1,0 +1,3 @@
+[submodule "crates/build/rust-gpu-builder"]
+	path = crates/build/rust-gpu-builder
+	url = https://github.com/Bevy-Rust-GPU/rust-gpu-builder.git
