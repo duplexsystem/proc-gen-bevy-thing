@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/lib/cpu",
+    "crates/lib/gpu",
+    "crates/build/rust-gpu-builder"
+]
+
+[patch.crates-io]
+bevy = { git = "https://github.com/Shfty/bevy", branch = "early-shader-defs-0.10.0" }

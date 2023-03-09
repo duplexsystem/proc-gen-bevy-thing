@@ -1,0 +1,13 @@
+[package]
+name = "gpu"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["dylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+spirv-std = { version = "0.5.0", features = ["glam"] }
+bevy-pbr-rust = { git = "https://github.com/Bevy-Rust-GPU/bevy-pbr-rust", tag = "v0.2.0" }
