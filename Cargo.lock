@@ -109,13 +109,12 @@ dependencies = [
 [[package]]
 name = "alsa"
 version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8512c9117059663fb5606788fbca3619e2a91dac0e3fe516242eab1fa6be5e44"
+source = "git+https://github.com/Procedural-Game/alsa-rs?branch=custom#5f3bb4a5bf60d2615f8e410e8787a8adf70f2d40"
 dependencies = [
  "alsa-sys",
  "bitflags",
  "libc",
- "nix 0.24.3",
+ "nix",
 ]
 
 [[package]]
@@ -630,7 +629,7 @@ name = "bevy_math"
 version = "0.10.0"
 source = "git+https://github.com/Shfty/bevy?branch=early-shader-defs-0.10.0#74870e7073ae49a46dcf1f17a8b43522a130b145"
 dependencies = [
- "glam 0.23.0",
+ "glam",
  "serde",
 ]
 
@@ -639,7 +638,7 @@ name = "bevy_mikktspace"
 version = "0.10.0"
 source = "git+https://github.com/Shfty/bevy?branch=early-shader-defs-0.10.0#74870e7073ae49a46dcf1f17a8b43522a130b145"
 dependencies = [
- "glam 0.23.0",
+ "glam",
 ]
 
 [[package]]
@@ -692,7 +691,7 @@ dependencies = [
  "bevy_utils",
  "downcast-rs",
  "erased-serde",
- "glam 0.23.0",
+ "glam",
  "once_cell",
  "parking_lot",
  "serde",
@@ -1397,7 +1396,7 @@ version = "3.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bbcf33c2a618cbe41ee43ae6e9f2e48368cd9f9db2896f10167d8d762679f639"
 dependencies = [
- "nix 0.26.2",
+ "nix",
  "windows-sys 0.45.0",
 ]
 
@@ -1454,7 +1453,7 @@ checksum = "e6591f13a63571c4821802eb5b10fd1155b1290bce87086440003841c8c3909b"
 dependencies = [
  "const_panic",
  "encase_derive",
- "glam 0.23.0",
+ "glam",
  "thiserror",
 ]
 
@@ -1733,8 +1732,7 @@ dependencies = [
 [[package]]
 name = "gilrs-core"
 version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6789d356476c3280a4e15365d23f62b4b4f1bcdac81fdd552f65807bce4666dd"
+source = "git+https://github.com/Procedural-Game/gilrs?branch=custom#b4d9ae9b8a488d750b9682e8dbceb4c7070bcb63"
 dependencies = [
  "core-foundation",
  "io-kit-sys",
@@ -1742,7 +1740,7 @@ dependencies = [
  "libc",
  "libudev-sys",
  "log",
- "nix 0.25.1",
+ "nix",
  "uuid",
  "vec_map",
  "wasm-bindgen",
@@ -1758,20 +1756,12 @@ checksum = "ad0a93d233ebf96623465aad4046a8d3aa4da22d4f4beba5388838c8a434bbb4"
 
 [[package]]
 name = "glam"
-version = "0.22.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12f597d56c1bd55a811a1be189459e8fad2bbc272616375602443bdfb37fa774"
-dependencies = [
- "num-traits",
-]
-
-[[package]]
-name = "glam"
 version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8e4afd9ad95555081e109fe1d21f2a30c691b5f0919c67dfa690a2e1eb6bd51c"
 dependencies = [
  "bytemuck",
+ "num-traits",
  "serde",
 ]
 
@@ -1971,7 +1961,7 @@ version = "8.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bd41d443f978bfa380a6dad58b62a08c43bcb960631f13e9d015b911eaf73588"
 dependencies = [
- "glam 0.23.0",
+ "glam",
  "once_cell",
 ]
 
@@ -2390,7 +2380,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d68d47bba83f9e2006d117a9a33af1524e655516b8919caac694427a6fb1e511"
 dependencies = [
  "approx",
- "glam 0.23.0",
+ "glam",
  "matrixmultiply",
  "nalgebra-macros",
  "num-complex",
@@ -2438,29 +2428,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3cf2aae958bd232cac5069850591667ad422d263686d75b52a065f9badeee5a3"
 dependencies = [
  "jni-sys",
-]
-
-[[package]]
-name = "nix"
-version = "0.24.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fa52e972a9a719cecb6864fb88568781eb706bac2cd1d4f04a648542dbf78069"
-dependencies = [
- "bitflags",
- "cfg-if",
- "libc",
-]
-
-[[package]]
-name = "nix"
-version = "0.25.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f346ff70e7dbfd675fe90590b92d59ef2de15a8779ae305ebcbfd3f0caf59be4"
-dependencies = [
- "autocfg",
- "bitflags",
- "cfg-if",
- "libc",
 ]
 
 [[package]]
@@ -3348,11 +3315,10 @@ dependencies = [
 [[package]]
 name = "spirv-std"
 version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "210182f2a5ac041abed607fe1e8f9b09d10fa8761c14c81d499fca62698a19dc"
+source = "git+https://github.com/Procedural-Game/rust-gpu?branch=custom#0f63cf193db3c794a8a77ef02c2039df76ba40d1"
 dependencies = [
  "bitflags",
- "glam 0.22.0",
+ "glam",
  "num-traits",
  "spirv-std-macros",
  "spirv-std-types",
@@ -3361,8 +3327,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-macros"
 version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b96c4f0d292ef14fd88e645abc207a1252c91632e219af3f2e2e885ae1052054"
+source = "git+https://github.com/Procedural-Game/rust-gpu?branch=custom#0f63cf193db3c794a8a77ef02c2039df76ba40d1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3373,8 +3338,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-types"
 version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "929da244d6ac6735f79dcf02e91ba8de9404699c9b9eb247677a4af90dd71857"
+source = "git+https://github.com/Procedural-Game/rust-gpu?branch=custom#0f63cf193db3c794a8a77ef02c2039df76ba40d1"
 
 [[package]]
 name = "spirv-tools"

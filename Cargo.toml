@@ -8,3 +8,6 @@ members = [
 
 [patch.crates-io]
 bevy = { git = "https://github.com/Shfty/bevy", branch = "early-shader-defs-0.10.0" }
+alsa = { git = "https://github.com/Procedural-Game/alsa-rs", branch = "custom" }
+gilrs-core = { git = "https://github.com/Procedural-Game/gilrs", branch = "custom" }
+spirv-std = { git = "https://github.com/Procedural-Game/rust-gpu", branch = "custom" }
