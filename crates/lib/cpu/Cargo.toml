@@ -4,11 +4,20 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
-crate-type = ["dylib"]
+crate-type = ["bin"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bevy = { git = "https://github.com/Shfty/bevy", branch = "early-shader-defs-0.10.0" }
+bevy = { version = "0.10.0", features = ["basis-universal"] }
 bevy_rapier3d = "0.21.0"
 bevy-rust-gpu = { git = "https://github.com/Bevy-Rust-GPU/bevy-rust-gpu", tag = "v0.4.0" }
+mimalloc = { version = "*", default-features = false }
+
+#Math
+bytemuck = "1.13.1"
+half = { version = "2.2.1", default-features = false, features = ["std", "use-intrinsics", "num-traits", "bytemuck"] }
+mint = "0.5.9"
+num-traits = { version = "0.2.15", default-features = false, features = ["std"] }
+approx = "0.5.1"
+glam = { version = "0.23.0", default-features = false, features = ["std", "mint", "core-simd", "bytemuck", "num-traits", "serde", ] }
